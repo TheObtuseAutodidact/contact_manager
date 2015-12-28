@@ -38,6 +38,10 @@ group :development, :test do
 
   # Use sqlite3 as the database for Active Record
   gem 'sqlite3'
+
+  # Use Unicorn as the app server
+  gem 'unicorn'
+
 end
 
 group :development do
