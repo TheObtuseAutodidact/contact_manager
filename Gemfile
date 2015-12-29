@@ -42,6 +42,8 @@ group :development, :test do
   # Use Unicorn as the app server
   gem 'unicorn'
 
+  gem 'launchy'
+
 end
 
 group :development do
@@ -52,7 +54,7 @@ group :development do
   gem 'spring'
 
   gem 'capybara'
-  
+
 end
 
 group :production do
