@@ -53,7 +53,7 @@ describe 'the person view', type: :feature do
     expect(page).to_not have_content(old_number)
   end
 
-  it 
+
 
 # Write a test that looks for a delete link for each phone number
 # Modify the partial to have that link
