@@ -92,6 +92,23 @@ describe 'the person view', type: :feature do
       expect(page).to have_content('newmail@test.com')
     end
 
+    it "updates an existing email address" do
+
+      first(:link, "edit email").click
+      page.fill_in("Address", with: "updated@test.com")
+      click_on("Update Email")
+      save_and_open_page
+      expect(current_path).to eq(person_path(person))
+      expect(page).to have_content("updated@test.com")
+    end
+
+    it "deletes an existing email address" do
+      first(:link, "delete email").click
+
+      expect(current_path).to eq(person_path(person))
+      expect(page).to_not have_content("john@test.com")
+
+    end
   end
 
 end
